@@ -41,6 +41,7 @@ function removeTransition(e){
 //   DETECTING WHETHER SITE IS USED IN MOBILE 
 let details  = navigator.userAgent
 
+let body = document.querySelector('body')
 let container = document.getElementsByClassName('container')[0]
 
 let  check = 'desktop'
@@ -52,8 +53,9 @@ window.mobileCheck = function() {
 
 if(check == false){
     console.log(mobile)
-    container.style.display = 'none'
+    body.style.display = 'none'
+
 }{
-    console.log('deks')
+    console.log('deessktopppp')
 }
 
