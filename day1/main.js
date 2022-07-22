@@ -17,7 +17,8 @@ function playSound(e) {
     let randomB = Math.floor( Math.random() * 255) + 1
 
     key.classList.add('playing')
-    key.style.backgroundColor=  ` rgba(${randomR}, ${randomG}, ${randomB}, 0.168)`
+    let RGB = key.style.backgroundColor=  ` rgba(${randomR}, ${randomG}, ${randomB}, 0.7)`
+    console.log('randomly generated value is ' , RGB)
 }
 
 
@@ -29,9 +30,29 @@ function removeTransition(e){
         console.log(this)
         
         this.classList.remove('playing')
-        this.style.backgroundColor = 'green'
+        this.style.backgroundColor =  `rgba(137, 51, 199, 0.168)` 
         }
     
   const keys = document.querySelectorAll('.key')
   keys.forEach(key => key.addEventListener('transitionend', removeTransition))
   window.addEventListener('keydown', playSound)
+
+
+//   DETECTING WHETHER SITE IS USED IN MOBILE 
+let details  = navigator.userAgent
+
+let container = document.getElementsByClassName('container')
+
+
+let regexp = /android|iphone|kindle|ipad/i;
+
+
+let isMobileDevice =  regexp.test(details)
+
+if(isMobileDevice){
+    container.style.visibility = 'hidden'
+    document.write('Please Open In Desktop')
+}else{
+    console.log('desktop')
+    
+}
