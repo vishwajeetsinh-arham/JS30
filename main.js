@@ -50,7 +50,7 @@ let regexp = /android|iphone|kindle|ipad/i;
 let isMobileDevice =  regexp.test(details)
 
 if(isMobileDevice){
-    container.style.visibility = 'hidden'
+    container.style.backgroundColor = 'green'
     document.write('Please Open In Desktop')
 }else{
     console.log('desktop')
