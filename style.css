@@ -50,13 +50,3 @@ body{
     font-weight: bold;
 }
 
-@media (max-width:992px){
-    body{
-        background-color: black;
-        color: black;
-        background-image: none;
-    }
-    .container{
-        display: none;
-    }
-}
